@@ -149,7 +149,8 @@ export default function Hero() {
             Try AI Demo
           </Link>
           <a
-            href="#"
+            href="/Gaurav_Setia_Resume.pdf"
+            download
             className="inline-flex items-center gap-2 text-muted hover:text-foreground transition-colors font-medium"
           >
             <Download size={18} />
