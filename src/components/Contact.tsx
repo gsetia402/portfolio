@@ -1,13 +1,23 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
 import { personalInfo } from "@/data/content";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const text = `Hi Gaurav! I'm *${name}* (${email}).%0A%0A${message}`;
+    const whatsappUrl = `https://wa.me/918920895002?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   return (
     <section id="contact" className="py-24 px-6" ref={ref}>
@@ -93,12 +103,15 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="glass rounded-xl p-6 space-y-4"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             <div>
               <label className="text-sm text-muted block mb-2">Name</label>
               <input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
                 className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder-muted/50 focus:border-accent focus:outline-none transition-colors"
                 placeholder="Your name"
               />
@@ -107,6 +120,9 @@ export default function Contact() {
               <label className="text-sm text-muted block mb-2">Email</label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder-muted/50 focus:border-accent focus:outline-none transition-colors"
                 placeholder="your@email.com"
               />
@@ -114,6 +130,9 @@ export default function Contact() {
             <div>
               <label className="text-sm text-muted block mb-2">Message</label>
               <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
                 rows={4}
                 className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder-muted/50 focus:border-accent focus:outline-none transition-colors resize-none"
                 placeholder="Your message..."
