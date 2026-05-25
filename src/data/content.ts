@@ -83,28 +83,44 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Android Lead Engineer",
-    company: "Sears Holdings / Kenmore",
-    period: "2021 — Present",
+    role: "Mobile Platform Lead",
+    company: "Sears Holdings, Pune",
+    period: "Dec 2021 — Present",
     description:
-      "Leading Android development for IoT smart home ecosystem. Architecting BLE/MQTT communication layers, managing a team of 8+ developers, and delivering enterprise-grade mobile applications.",
-    tech: ["Kotlin", "BLE", "MQTT", "AWS", "Jetpack Compose"],
+      "Leading development for Kenmore smart home app and Sears Home Services technician app. Owning end-to-end feature delivery, architecture, real-time sync, cloud integration, and release management. Built reliable MQTT/BLE/Wi-Fi communication systems improving device connectivity by ~30%. Led React Native technician app, mentoring 5-8 engineers.",
+    tech: ["Kotlin", "React Native", "MQTT", "BLE", "AWS", "Clean Architecture"],
   },
   {
-    role: "Senior Android Engineer",
-    company: "Tech Mahindra",
-    period: "2018 — 2021",
+    role: "Senior Android Developer",
+    company: "Programming.com, Gurgaon",
+    period: "Feb 2020 — Dec 2021",
     description:
-      "Built and maintained large-scale Android applications for enterprise clients. Implemented CI/CD pipelines and mentored junior developers.",
-    tech: ["Kotlin", "Java", "Firebase", "REST APIs", "MVVM"],
+      "Delivered multiple Android applications (50K+ downloads) using MVVM and Clean Architecture. Designed scalable modular mobile systems and mentored developers on production-grade solutions.",
+    tech: ["Kotlin", "MVVM", "Clean Architecture", "REST APIs", "Firebase"],
   },
   {
     role: "Android Developer",
-    company: "Previous Company",
-    period: "2014 — 2018",
+    company: "OFBusiness, Gurgaon",
+    period: "Sep 2019 — Jan 2020",
     description:
-      "Developed multiple Android applications from scratch, focusing on performance optimization and clean architecture patterns.",
-    tech: ["Java", "Android SDK", "SQLite", "Retrofit", "RxJava"],
+      "Built cross-platform applications using React Native. Integrated REST APIs and improved application responsiveness.",
+    tech: ["React Native", "REST APIs", "JavaScript"],
+  },
+  {
+    role: "Android Developer",
+    company: "GoParties (BoxEngage), Gurgaon",
+    period: "Jul 2016 — Sep 2019",
+    description:
+      "Built and scaled mobile applications from scratch in a startup environment. Owned feature delivery end-to-end from development to production.",
+    tech: ["Java", "Android SDK", "Firebase", "REST APIs"],
+  },
+  {
+    role: "Android Developer",
+    company: "IBizz Technologies",
+    period: "Jan 2015 — Jul 2016",
+    description:
+      "Developed Android applications with focus on UI/UX and core functionality.",
+    tech: ["Java", "Android SDK", "SQLite"],
   },
 ];
 
