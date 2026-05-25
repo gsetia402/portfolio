@@ -126,6 +126,13 @@ export default function About() {
               managing teams of 15+, and exploring AI agents & intelligent
               automation on the side.
             </p>
+
+            {/* Education */}
+            <div className="pt-4 border-t border-border/50">
+              <p className="text-sm text-accent font-medium mb-2">Education</p>
+              <p className="text-foreground text-sm">M.Tech — BITS Pilani</p>
+              <p className="text-muted text-sm">B.Tech — Arya Institute of Engineering & Technology, Jaipur</p>
+            </div>
           </motion.div>
         </div>
 

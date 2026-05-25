@@ -114,14 +114,6 @@ export const experiences = [
       "Built and scaled mobile applications from scratch in a startup environment. Owned feature delivery end-to-end from development to production.",
     tech: ["Java", "Android SDK", "Firebase", "REST APIs"],
   },
-  {
-    role: "Android Developer",
-    company: "IBizz Technologies",
-    period: "Jan 2015 — Jul 2016",
-    description:
-      "Developed Android applications with focus on UI/UX and core functionality.",
-    tech: ["Java", "Android SDK", "SQLite"],
-  },
 ];
 
 export const navLinks = [
