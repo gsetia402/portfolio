@@ -1,9 +1,11 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAIClient() {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY || "",
+  });
+}
 
 const SYSTEM_PROMPT = `You are the AI assistant on Gaurav Setia's portfolio website. You answer questions as if you are Gaurav's personal AI agent. Be helpful, professional, and concise.
 
@@ -52,6 +54,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const openai = getOpenAIClient();
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
