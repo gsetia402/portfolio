@@ -4,7 +4,7 @@ export const personalInfo = {
   subtitle: "Android • React Native • Backend",
   description:
     "Mobile Lead Engineer with expertise in Android, React Native & Backend development. I build scalable mobile apps, IoT solutions & cloud-connected products — from native Android to cross-platform experiences.",
-  email: "gaurav.setia@gmail.com",
+  email: "gsetia.bits@gmail.com",
   github: "https://github.com/gauravsetia",
   linkedin: "https://www.linkedin.com/in/gaurav-setia-ab46a057/",
   location: "India",
