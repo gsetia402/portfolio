@@ -43,12 +43,12 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={`text-sm font-medium transition-colors duration-200 ${
-                    link.label === "AI Demo"
+                    link.label === "Ask AI"
                       ? "text-secondary hover:text-secondary/80 flex items-center gap-1"
                       : "text-muted hover:text-foreground"
                   }`}
                 >
-                  {link.label === "AI Demo" && (
+                  {link.label === "Ask AI" && (
                     <span className="w-1.5 h-1.5 bg-secondary rounded-full" />
                   )}
                   {link.label}
@@ -70,7 +70,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="px-5 py-2 rounded-full bg-accent text-background text-sm font-semibold hover:shadow-[0_0_20px_rgba(0,245,212,0.3)] transition-all duration-200"
             >
-              Book a call
+              Let's Connect
             </a>
           </li>
         </ul>
@@ -123,7 +123,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="px-5 py-2 rounded-full bg-accent text-background text-sm font-semibold"
                 >
-                  Book a call
+                  Let's Connect
                 </a>
               </li>
             </ul>

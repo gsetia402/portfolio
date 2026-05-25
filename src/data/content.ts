@@ -1,19 +1,19 @@
 export const personalInfo = {
   name: "Gaurav Setia",
-  title: "Mobile Lead Engineer",
-  subtitle: "Android • React Native • Backend",
+  title: "Mobile Platform Engineer",
+  subtitle: "Scalable Mobile Systems • IoT • Cloud",
   description:
-    "Mobile Lead Engineer with expertise in Android, React Native & Backend development. I build scalable mobile apps, IoT solutions & cloud-connected products — from native Android to cross-platform experiences.",
+    "I architect and ship production-grade mobile platforms that connect millions of users to intelligent systems — from native Android to cross-platform, from device firmware to the cloud.",
   email: "gsetia.bits@gmail.com",
-  github: "https://github.com/gauravsetia",
+  github: "https://github.com/gsetia402",
   linkedin: "https://www.linkedin.com/in/gaurav-setia-ab46a057/",
   location: "India",
 };
 
 export const heroHeadline = {
-  line1: "I build things with",
-  highlight: "Mobile & Backend",
-  rotatingWords: ["Android", "React Native", "Kotlin", "Spring Boot", "IoT"],
+  line1: "Engineering mobile platforms",
+  highlight: "at scale",
+  rotatingWords: ["Android", "React Native", "Kotlin", "IoT", "Platform Systems"],
 };
 
 export const stats = [
@@ -120,6 +120,6 @@ export const navLinks = [
   { label: "Home", href: "#" },
   { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
-  { label: "AI Demo", href: "/demo" },
+  { label: "Ask AI", href: "/demo" },
   { label: "Contact", href: "#contact" },
 ];

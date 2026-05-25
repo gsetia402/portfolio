@@ -35,7 +35,7 @@ export default function AIDemo() {
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
               <span className="text-accent text-xs font-mono">
-                Live AI agent — try it now
+                AI-powered — ask me anything
               </span>
             </motion.div>
 
@@ -46,8 +46,8 @@ export default function AIDemo() {
               transition={{ delay: 0.4 }}
               className="text-3xl md:text-5xl font-bold mb-4 leading-tight"
             >
-              Don&apos;t just read about it —{" "}
-              <span className="gradient-text">talk to my AI</span>
+              Have questions?{" "}
+              <span className="gradient-text">Ask my AI agent</span>
             </motion.h2>
 
             {/* Description */}
@@ -57,8 +57,8 @@ export default function AIDemo() {
               transition={{ delay: 0.5 }}
               className="text-muted max-w-lg mx-auto mb-8 leading-relaxed"
             >
-              A real AI agent running on this site, powered by OpenAI GPT-4o.
-              Same tech I build into client products. Ask it anything.
+              An AI agent trained on my experience, skills, and projects.
+              Built with the same platform engineering mindset I bring to products.
             </motion.p>
 
             {/* CTA Button */}

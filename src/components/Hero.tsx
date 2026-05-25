@@ -72,23 +72,34 @@ export default function Hero() {
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-24 left-20 w-4 h-4 border border-accent/40 rounded-full animate-float hidden md:block" />
-      <div className="absolute top-1/3 right-24 w-3 h-3 bg-secondary/40 rounded-sm rotate-45 animate-float hidden md:block" style={{ animationDelay: "2s" }} />
-      <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-accent/30 rounded-full animate-float hidden md:block" style={{ animationDelay: "1s" }} />
+      <motion.div
+        animate={{ y: [0, -12, 0], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        className="absolute top-24 left-20 w-4 h-4 border border-accent/40 rounded-full hidden md:block"
+      />
+      <motion.div
+        animate={{ y: [0, 10, 0], rotate: [45, 90, 45] }}
+        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+        className="absolute top-1/3 right-24 w-3 h-3 bg-secondary/40 rounded-sm hidden md:block"
+      />
+      <motion.div
+        animate={{ scale: [1, 1.5, 1], opacity: [0.2, 0.5, 0.2] }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+        className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-accent/30 rounded-full hidden md:block"
+      />
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center pt-20">
+      <div className="relative z-10 max-w-3xl mx-auto text-center pt-20">
         {/* Available Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, type: "spring" }}
           className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-accent/30 bg-accent/5 mb-10"
         >
           <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <span className="text-accent text-sm font-medium">
-            Available for freelance projects
+            Open to opportunities
           </span>
-          <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
         </motion.div>
 
         {/* Main Headline */}
@@ -96,7 +107,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold mb-4 tracking-tight leading-[1.1]"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight leading-[1.1]"
         >
           <span className="text-foreground">{heroHeadline.line1}</span>
           <br />
@@ -141,12 +152,12 @@ export default function Hero() {
           </a>
           <Link
             href="/demo"
-            className="inline-flex items-center gap-2 px-7 py-3.5 border border-accent text-accent font-semibold rounded-full hover:bg-accent/10 hover:shadow-[0_0_20px_rgba(0,245,212,0.2)] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-7 py-3.5 border border-accent/50 text-accent font-semibold rounded-full hover:bg-accent/10 hover:border-accent hover:shadow-[0_0_20px_rgba(0,245,212,0.2)] transition-all duration-300"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" />
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
-            Try AI Demo
+            Ask AI
           </Link>
           <a
             href="/Gaurav_Setia_Resume.pdf"
@@ -171,7 +182,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.1 }}
-              className="glass rounded-xl p-5 text-center hover:glow-accent transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -4 }}
+              className="glass rounded-xl p-5 text-center hover:glow-accent transition-all duration-300 cursor-default"
             >
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">
                 {stat.value}+
